@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="css/Form.css">
+</head>
+<body class="body">
+<div class="parent">
+  <form action="shopify.html" method="post" id="form" class="form">
+  <div class="name">
+    <label for="firstname" class="label">Firstname</label><br>
+  <input required type="text" name="firstname" id="firstname" placeholder="firstname" class="text"><br>
+  <label for="surname" class="label">Surname</label><br>
+  <input type="text" name="surname" id="surname" placeholder="surname" class="text"><br><br>
+   <label for="email" class="label">Email</label><br>
+  <input required type="text" name="email" id="email" placeholder="Email" class="text"><br>
+  </div><br>
+  <textarea name="" id="message" placeholder="write a message..."  style="width:50%;"></textarea><br><br>
+  <label for="">Choose your favorite color</label><br>
+
+  <select name="color" id="color" class="color">
+    <option value="red">red</option>
+     <option value="green">green</option>
+      <option value="yellow">yellow</option>
+  </select><br><br>
+
+  <label for="">choose your favorite food</label><br>
+   <div class="meal">
+     <label for="">Jollof</label><input type="checkbox" name="Jollof" id="jollof" value="jollof">
+  <label for="">Rice ball</label><input type="checkbox" name="Rice_ball" id="rice_ball" value="rice_ball">
+  <label for="">Fried rice</label><input type="checkbox" name="Fried_rice" id="fried_rice" value="fried_rice">
+  <label for="">Fried yam</label><input type="checkbox" name="Fried_yam" id="fried_yam" value="fried_yam"><br><br></div>
+
+   <label for="">Gender</label><br>
+   <div class="gender">
+     <label for="">Male</label><input type="radio" name="gender" id="male" value="male">
+  <label for="">Female</label><input type="radio" name="gender" id="female" value="female">
+  <label for="">Other</label><input type="radio" name="gender" id="other" value="other"><br><br></div>
+
+  <button type="submit" value="submit" id="send">Send</button>
+</form>
+</div>
+
+
+
+
+<script src="js/form.js"></script>
+</body>
+</html>

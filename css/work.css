@@ -1,0 +1,124 @@
+
+.navbar{
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    color: white;
+}
+.menu{
+    display: flex;
+    column-gap: 30px;
+}
+.menu1{
+    display: flex;
+    column-gap: 30px ;
+}
+.logo{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: xx-large;
+}
+.container{
+    width: 100%;
+    height: auto;
+    padding:20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.box img{
+    width: 300px;
+    height: 200px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 300px;
+    border: 2px solid rgb(59, 19, 19);
+    margin: 10px;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+    font-size: large;
+}
+.container2{
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+.footer{
+    display: flex;
+    background-color: black;
+    flex-direction: column;
+    color: white;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.firstfooter{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.secondfooter{
+    display: flex;
+    justify-content:space-between;
+}
+
+.rightcontainer{
+    width: 70%;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.leftcontainer{
+    width: 30%;
+     display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+.coverimage{
+    display: flex;
+    width: 100%;
+  
+
+}
+
+.leftimage{
+width: 70%;
+height:800px ;
+background-color: aqua;
+
+}
+
+.rightimage{
+width: 30%;
+height:800px ;
+display: flex;
+flex-direction: column;    
+}
+
+.rightimage1{
+
+height:50% ;
+display: flex;
+flex-direction: column;    
+}
+
+.rightimage2{
+
+height:50% ;
+display: flex;
+flex-direction: column;    
+}
+.copyright{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+}
+
+

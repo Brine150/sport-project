@@ -1,0 +1,19 @@
+
+*{
+    margin: 0px;
+    text-decoration: none;
+    list-style: none;
+}
+.menu ul {
+    display: flex;
+    justify-content: space-around;
+    height: 70px;
+    background-color: black;
+    align-items: center;
+    font-size: 32px;
+    color: antiquewhite;
+}
+
+.menu ul a{
+    color: blanchedalmond;
+}
