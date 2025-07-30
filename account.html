@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sports.css">
+
+    <style>
+     .body{
+        background-image: url(images/run.jpg);
+        background-repeat: no repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        min-height: 100vh;
+     }
+    </style>
+</head>
+<body class="body">
+<nav  id="navbar">
+        <a href="index.html">Home</a>
+        <a href="#">Sports</a>
+        <a href="#"> Scores</a>
+        <a href="watch.html">Watch</a>
+        <a href="account.html" id="account">Account</a>
+     </nav>
+
+     <div class="wrapper" id="login">
+        <form action="">
+            <h1 class="login">LogIn</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required class="input">
+            <box-icon type='solid' name='user'></box-icon>
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password" required class="input">
+                <box-icon name='lock-alt' type='solid' ></box-icon>
+            </div>
+            <div class="remember-forgot">
+                <label for=""><input type="checkbox">Remember me</label>
+                <a href="#">forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+
+            <div class="register-link">
+                <p>Don't have an account? <a href="#" id="backToRegister">Register</a></p>
+            </div>
+        
+        </form>
+     </div>
+    <div class="container" id="register">
+        <div class="wrapper">
+        <form action="">
+            <h1 class="login">SignUp</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required class="input">
+    
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="password" required class="input">
+            
+            </div>
+            <div class="input-box">
+                <input type="password" placeholder="confirm password" required class="input">
+            
+            </div>
+            <button type="submit" class="btn">SignUp</button>
+
+            <div class="register-link">
+                <p>Already have an account? <a href="#" id="backToLogin">Login</a></p>
+            </div>
+        
+        </form>
+     </div>
+    </div>
+
+    
+      
+    <script src="js/sports.js"></script>
+</body>
+</html>
