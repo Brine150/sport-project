@@ -1,82 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/sports.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Register - Sports Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
 
-    <style>
-     .body{
-        background-image: url(images/run.jpg);
-        background-repeat: no repeat;
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        min-height: 100vh;
-     }
-    </style>
+    body {
+      background: url(/images/run.jpg);
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+  
+
+    .container {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 400px;
+      backdrop-filter: blur(20px);
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #ff0000, #0066ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-transform: uppercase;
+    }
+
+    .form {
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form.active {
+      display: flex;
+    }
+
+    .input-box {
+      position: relative;
+    }
+
+    .input-box input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #fff;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    .input-box label {
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      color: #bbb;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .input-box input:focus ~ label,
+    .input-box input:valid ~ label {
+      top: -8px;
+      left: 10px;
+      font-size: 0.75rem;
+      color: #ff0000;
+    }
+
+    button {
+      padding: 12px;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #ff0000, #0066ff);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .toggle-text {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .toggle-text a {
+      color: #ff0000;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .toggle-text a:hover {
+      color: #0066ff;
+    }
+  </style>
 </head>
-<body class="body">
-<nav  id="navbar">
-        <a href="../index.html">Home</a>
-        <a href="#">Sports</a>
-        <a href="#"> Scores</a>
-        <a href="watch.html">Watch</a>
-        <a href="account.html" id="account">Account</a>
-     </nav>
+<body> 
 
-     <div class="wrapper" id="login">
-        <form action="">
-            <h1 class="login">LogIn</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required class="input">
-            <box-icon type='solid' name='user'></box-icon>
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="password" required class="input">
-                <box-icon name='lock-alt' type='solid' ></box-icon>
-            </div>
-            <div class="remember-forgot">
-                <label for=""><input type="checkbox">Remember me</label>
-                <a href="#">forgot password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-
-            <div class="register-link">
-                <p>Don't have an account? <a href="#" id="backToRegister">Register</a></p>
-            </div>
-        
-        </form>
-     </div>
-    <div class="container" id="register">
-        <div class="wrapper">
-        <form action="">
-            <h1 class="login">SignUp</h1>
-            <div class="input-box">
-                <input type="text" placeholder="Username" required class="input">
-    
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="password" required class="input">
-            
-            </div>
-            <div class="input-box">
-                <input type="password" placeholder="confirm password" required class="input">
-            
-            </div>
-            <button type="submit" class="btn">SignUp</button>
-
-            <div class="register-link">
-                <p>Already have an account? <a href="#" id="backToLogin">Login</a></p>
-            </div>
-        
-        </form>
-     </div>
-    </div>
+  <div class="container">
+    <h1 id="form-title">Login</h1>
 
     
-      
-    <script src="js/sports.js"></script>
+    <form id="login-form" class="form active">
+      <div class="input-box">
+        <input type="email" id="login-email" required>
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <input type="password" id="login-password" required>
+        <label>Password</label>
+      </div>
+      <button type="button" onclick="login()">Login</button>
+      <p class="toggle-text">Don’t have an account? <a onclick="showRegister()">Register</a></p>
+    </form>
+
+    
+    <form id="register-form" class="form">
+      <div class="input-box">
+        <input type="text" id="reg-name" required>
+        <label>Full Name</label>
+      </div>
+      <div class="input-box">
+        <input type="email" id="reg-email" required>
+        <label>Email</label>
+      </div>
+      <div class="input-box">
+        <input type="password" id="reg-password" required>
+        <label>Password</label>
+      </div>
+      <div class="input-box">
+        <input type="password" id="reg-confirm" required>
+        <label>Confirm Password</label>
+      </div>
+      <button type="button" onclick="register()">Register</button>
+      <p class="toggle-text">Already have an account? <a onclick="showLogin()">Login</a></p>
+    </form>
+  </div>
+
+  <script src="/js/contact-us.js"></script>
+
 </body>
 </html>

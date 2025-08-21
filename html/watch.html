@@ -5,19 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/sports.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+     integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <style>
+       body{
+        margin: 0;
+        padding: 0;
+       }
+       
+       nav{
+           display: flex;
+           justify-content: space-around;
+           align-items: center;
+          background: linear-gradient(90deg, #ff0000, #0066ff);
+          height: 40px;
+        }
+
+        nav a{
+          color: white;
+          text-decoration: none;
+          font-family: 'Courier New', Courier, monospace;
+          font-weight: bolder;
+          font-style: oblique;
+        }
+      </style>
 </head>
 <body>
     
  <nav  id="navbar">
-        <a href="../index.html">Home</a>
-        <a href="#">Sports</a>
-        <a href="#"> Scores</a>
-        <a href="#">Watch</a>
-        <a href="#">Account</a>
+        <a href="/index.html">Home</a>
+        <a href="watch.html">Watch</a>
+        <a href="scores.html"> Scores</a>
+        <a href="/html/contact-us.html">Contact Us</a>
+        <a href="account.html">Login</a>
      </nav>
 
 <div class="">
-      <img src="images/ad.png" alt="" class="ad">
+      <img src="/images/ad.png" class="ad">
 </div>
 
 <section class="main-content">
@@ -137,7 +162,7 @@
   </section>
 
   <div>
-    <img src="images/ad2.jpg" alt="" class="ad">
+    <img src="/images/ad2.jpg"  class="ad">
   </div>
 
   <section class="main-content">
@@ -206,19 +231,20 @@
     <div class="footer-column">
       <h3>Quick Links</h3>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Scores</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="/html/account.html">Login</a></li>
+        <li><a href="/html/scores.html">Scores</a></li>
+        <li><a href="/html/contact-us.html">Contact Us</a></li>
+      </ul>
       </ul>
     </div>
     <div class="footer-column">
       <h3>Follow Us</h3>
       <p>Connect on social media:</p>
       <ul>
-        <li><a href="#">Facebook</a></li>
-        <li><a href="#">Twitter</a></li>
-        <li><a href="#">Instagram</a></li>
+        <li><a href="https://www.facebook.com">Facebook<i class="fa-brands fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com">Twitter<i class="fa-brands fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com">Instagram<i class="fa-brands fa-instagram"></i></a></li>
       </ul>
     </div>
   </footer>

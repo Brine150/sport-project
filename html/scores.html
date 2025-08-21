@@ -5,21 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/sports.css">
+  
     <style>
-        .body{
-            background-color: rgb(31, 31, 87);
-            
+        body{
+            background: url(/images/UEfA.jpg);
+            background-position: center;
+            margin: 0px;
+            padding: 0px;
+        
         }
+        .logo{
+          font-size: 2em;
+          border: 1px solid rgb(245, 245, 245);
+          border-color:rgb(162, 25, 25) rgb(227, 125, 176) greenyellow rgb(238, 238, 126) ;
+          padding: 10px;
+          font-weight:bolder;
+          color: white;
+          font-style: oblique;
+          border-radius: 1px 35px 1px 35px;
+          text-shadow: 2px 5px 10px black;
+          box-shadow: 2px 3px 6px black;
+          background-color: blue;
+          user-select: none;
+          font-family: 'Courier New', Courier, monospace;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+}
+
+header{
+    position: relative;
+    top: 0;
+    left: 0;
+   background: linear-gradient(90deg, #ff0000, #0066ff);
+    width: 100%;
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 4px black;
+    height: 50px;
+}
+.navigation{
+  display: flex;
+
+}
+
+.navigation a{
+    position: relative;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+}
+footer{
+  background-color: #0066ff;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
     </style>
 </head>
-<body class="body">
-     <nav  id="navbar">
-        <a href="../index.html">Home</a>
-        <a href="#">Sports</a>
-        <a href="scores.html"> Scores</a>
-        <a href="watch.html">Watch</a>
-        <a href="account.html">Account</a>
-     </nav>
+<body>
+  
+ <header>
+    <nav class="navigation">
+         <h2 class="logo">BM Sports</h2>
+           
+    </nav>
+     </header>
     
 
 
@@ -166,6 +225,9 @@
       </div>
     </div>
   </div>
+   <footer>
+    © 2025 Sports Website | All Rights Reserved
+  </footer>
   <script src="js/sports.js"></script>
 </body>
 </html>
