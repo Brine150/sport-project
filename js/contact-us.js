@@ -31,6 +31,7 @@
       let password = document.getElementById("reg-password").value;
       let confirm = document.getElementById("reg-confirm").value;
 
+
       if (!name || !email || !password || !confirm) {
         alert("Please fill in all fields.");
         return;
@@ -42,3 +43,16 @@
       alert("Registration Successful!\nWelcome, " + name);
       showLogin();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
